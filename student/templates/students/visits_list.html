@@ -1,0 +1,95 @@
+{% extends "students/base.html" %}
+{% load static from staticfiles %}
+{% block meta_title %}Студенти{% endblock meta_title %}
+{% block title %}База Студентів{% endblock title %}
+{% block content %}
+<div>
+     <h2>Облік Відвідування</h2>
+</div>
+
+<p id="month"><a href="#" id="arw">&larr;</a> Грудень 2015 <a href="#" id="arv">&rarr;</a> </p>
+
+<!-- Start calendar and checkboxes -->
+<form>
+<table class="table table-hover table-striped table-bordered">
+	<thead class="table">
+        <tr>
+			<th>#</th>
+			<th>Студенти</th>
+			<th>Чт 1</th>
+			<th>Пт 2</th>
+			<th>Сб 3</th>
+			<th>Нд 4</th>
+			<th>Пн 5</th>
+			<th>Вт 6</th>
+			<th>Ср 7</th>
+			<th>Чт 8</th>
+			<th>Пт 9</th>
+            <th>Сб 10</th>
+            <th>Вс 11</th>
+            <th>Пн 12</th>
+            <th>Вт 13</th>
+            <th>Ср 14</th>
+            <th>Чт 15</th>
+            <th>Пт 16</th>
+            <th>Сб 17</th>
+            <th>Нд 18</th>
+            <th>Пн 19</th>
+            <th>Вт 20</th>
+            <th>Ср 21</th>
+            <th>Чт 22</th>
+            <th>Пт 23</th>
+            <th>Сб 24</th>
+            <th>Нд 25</th>
+            <th>Пн 26</th>
+            <th>Вт 27</th>
+            <th>Ср 28</th>
+            <th>Чт 29</th>
+            <th>Пт 30</th>
+            <th>Сб 31</th>
+        </tr>
+	</thead>
+
+		<tbody>
+        {% for journal in journal %}
+			<tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ journal.last_name }} {{ journal.first_name }}</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+    {% endfor %}
+        </tbody>
+</table>
+</form>
+
+{% endblock content %}
